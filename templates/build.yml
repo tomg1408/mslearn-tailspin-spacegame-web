@@ -3,22 +3,22 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-	parameters:
-	buildConfiguration: 'Release'
+parameters:
+  buildConfiguration: 'Release'
 
-	steps:
+steps:
 - task: DotNetCoreCLI@2
-  displayName: 'Build the project - ${{ parameters.buildConfiguration}}'
+  displayName: 'Build the project - ${{ parameters.buildConfiguration }}'
   inputs:
-  command: 'build'
-  arguments: '--no-restore --configuration ${{ parameters.buildConfiguration }}'
-  projects: '**/*.csproj'
+    command: 'build'
+    arguments: '--no-restore --configuration ${{ parameters.buildConfiguration }}'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Publish the project - ${{ parameters.buildConfiguration}}'
+  displayName: 'Publish the project - ${{ parameters.buildConfiguration }}'
   inputs:
-  command: 'publish'
-  projects: '**/*.csproj'
-  publishWebProjects: false
-  arguments: '--no-build --configuration ${{ parameters.buildConfiguration }} --output $(Build.ArtifactStagingDirectory)/${{parameters.buildConfiguration}}'
-  zipAfterPublish: true
+    command: 'publish'
+    projects: '**/*.csproj'
+    publishWebProjects: false
+    arguments: '--no-build --configuration ${{ parameters.buildConfiguration }} --output $(Build.ArtifactStagingDirectory)/${{ parameters.buildConfiguration }}'
+    zipAfterPublish: true
