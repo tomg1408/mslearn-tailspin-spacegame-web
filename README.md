@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/thomasgreenfield/Space%20game%20%20web%20-%20Delivery%20plans/_apis/build/status/tomg1408.mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/thomasgreenfield/Space%20game%20%20web%20-%20Delivery%20plans/_build/latest?definitionId=1&branchName=master)
 
 # Contributing
 
