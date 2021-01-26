@@ -17,7 +17,6 @@ displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
 inputs:
 version: '$(dotnetSdkVersion)'
 
-
 - task: NuGetToolInstaller@0
 inputs:
 versionSpec: '5.6.0'
